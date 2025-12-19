@@ -64,6 +64,8 @@ export const Table: React.FC<TableProps> = ({ data, variant = 'audit' }) => {
               <tr>
                 <th className="px-4 py-3 text-left font-medium whitespace-nowrap border-r border-gray-100 w-16">序号</th>
                 <th className="px-4 py-3 text-left font-medium whitespace-nowrap border-r border-gray-100">名单类型</th>
+                <th className="px-4 py-3 text-left font-medium whitespace-nowrap border-r border-gray-100">创建人</th>
+                <th className="px-4 py-3 text-left font-medium whitespace-nowrap border-r border-gray-100">来源</th>
                 <th className="px-4 py-3 text-left font-medium whitespace-nowrap border-r border-gray-100">来源平台</th>
                 <th className="px-4 py-3 text-left font-medium whitespace-nowrap border-r border-gray-100">平台用户ID</th>
                 <th className="px-4 py-3 text-left font-medium whitespace-nowrap border-r border-gray-100">用户名</th>
@@ -90,13 +92,19 @@ export const Table: React.FC<TableProps> = ({ data, variant = 'audit' }) => {
                           {row.listType}
                       </span>
                     </td>
+                    <td className="px-4 py-3 border-r border-gray-100 whitespace-nowrap">{row.creator}</td>
+                    <td className="px-4 py-3 border-r border-gray-100 whitespace-nowrap">{row.source}</td>
                     <td className="px-4 py-3 border-r border-gray-100 whitespace-nowrap">{row.sourcePlatform}</td>
                     <td className="px-4 py-3 border-r border-gray-100 whitespace-nowrap">{row.platformUserId}</td>
                     <td className="px-4 py-3 border-r border-gray-100 whitespace-nowrap">{row.username}</td>
                     <td className="px-4 py-3 border-r border-gray-100 whitespace-nowrap font-medium text-gray-700">{row.phone}</td>
                     <td className="px-4 py-3 border-r border-gray-100 whitespace-normal break-words max-w-[250px]">{row.reason}</td>
                     <td className="px-4 py-3 border-r border-gray-100 whitespace-nowrap">{row.addTime}</td>
-                    <td className="px-4 py-3 border-r border-gray-100 whitespace-nowrap">{row.expireTime}</td>
+                    <td className="px-4 py-3 border-r border-gray-100 whitespace-nowrap">
+                        <span className={row.expireTime === '永久封禁' ? 'text-red-500 font-bold' : ''}>
+                            {row.expireTime}
+                        </span>
+                    </td>
                     <td className="px-4 py-3 border-r border-gray-100 whitespace-nowrap">
                       <span className={`px-2 py-0.5 rounded text-[11px] border ${
                           row.status === '需复核'
@@ -118,7 +126,7 @@ export const Table: React.FC<TableProps> = ({ data, variant = 'audit' }) => {
                 ))
               ) : (
                   <tr>
-                      <td colSpan={12} className="h-96 text-center">
+                      <td colSpan={14} className="h-96 text-center">
                           <div className="flex flex-col items-center justify-center h-full text-gray-400">
                               <span>暂无数据</span>
                           </div>
@@ -165,7 +173,7 @@ export const Table: React.FC<TableProps> = ({ data, variant = 'audit' }) => {
                     <span className={`px-2 py-0.5 rounded border text-[11px] ${
                         row.listType === '灰名单' 
                         ? 'bg-[#fff7e6] text-[#fa8c16] border-[#ffd591]' 
-                        : 'bg-[#fff1f0] text-[#f5222d] border-[#ffa39e]'
+                        : 'bg-[#fff7e6] text-[#fa8c16] border-[#ffd591]' 
                     }`}>
                         {row.listType}
                     </span>

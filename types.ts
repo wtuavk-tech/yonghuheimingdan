@@ -16,6 +16,8 @@ export interface AuditEntry {
 export interface ListEntry {
   id: number;
   listType: '灰名单' | '黑名单';
+  creator: string;           // 创建人
+  source: string;            // 来源
   sourcePlatform: string;
   platformUserId: string;
   username: string;

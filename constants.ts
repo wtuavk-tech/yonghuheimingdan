@@ -147,6 +147,8 @@ export const MOCK_LIST_DATA: ListEntry[] = [
     {
         id: 1,
         listType: '灰名单',
+        creator: '管理员',
+        source: '后台录入',
         sourcePlatform: '',
         platformUserId: '',
         username: '',
@@ -160,6 +162,8 @@ export const MOCK_LIST_DATA: ListEntry[] = [
     {
         id: 2,
         listType: '黑名单',
+        creator: '管理员',
+        source: '手动派单',
         sourcePlatform: '淘宝',
         platformUserId: '',
         username: '',
@@ -173,6 +177,8 @@ export const MOCK_LIST_DATA: ListEntry[] = [
     {
         id: 3,
         listType: '黑名单',
+        creator: '管理员',
+        source: '后台录入',
         sourcePlatform: '',
         platformUserId: '',
         username: '',
@@ -186,6 +192,8 @@ export const MOCK_LIST_DATA: ListEntry[] = [
     {
         id: 4,
         listType: '灰名单',
+        creator: '管理员',
+        source: '自动同步',
         sourcePlatform: '饿了么',
         platformUserId: 'el45646+1',
         username: 'el45646',
@@ -199,6 +207,8 @@ export const MOCK_LIST_DATA: ListEntry[] = [
     {
         id: 5,
         listType: '黑名单',
+        creator: '管理员',
+        source: '自动同步',
         sourcePlatform: '淘宝',
         platformUserId: 'TB34654742342',
         username: 'tb324414',
@@ -212,6 +222,8 @@ export const MOCK_LIST_DATA: ListEntry[] = [
     {
         id: 6,
         listType: '黑名单',
+        creator: '管理员',
+        source: '后台录入',
         sourcePlatform: '京东',
         platformUserId: '',
         username: '',
@@ -225,6 +237,8 @@ export const MOCK_LIST_DATA: ListEntry[] = [
     {
         id: 7,
         listType: '黑名单',
+        creator: '管理员',
+        source: '后台录入',
         sourcePlatform: '',
         platformUserId: '',
         username: '',
@@ -238,6 +252,8 @@ export const MOCK_LIST_DATA: ListEntry[] = [
     {
         id: 8,
         listType: '黑名单',
+        creator: '系统审核',
+        source: '风险控制',
         sourcePlatform: '',
         platformUserId: '',
         username: '',
@@ -251,6 +267,8 @@ export const MOCK_LIST_DATA: ListEntry[] = [
     {
         id: 9,
         listType: '黑名单',
+        creator: '系统审核',
+        source: '风险控制',
         sourcePlatform: '',
         platformUserId: '',
         username: '',
@@ -264,13 +282,15 @@ export const MOCK_LIST_DATA: ListEntry[] = [
     {
         id: 10,
         listType: '黑名单',
+        creator: '管理员',
+        source: '后台录入',
         sourcePlatform: '',
         platformUserId: '',
         username: '',
         phone: '17673209190',
         reason: '',
         addTime: '2024-01-13 17:15:02',
-        expireTime: '2026-01-13 17:15:02',
+        expireTime: '永久封禁',
         status: '需复核',
         remark: '骗人的'
     }
